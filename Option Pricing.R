@@ -66,7 +66,7 @@ Gamma_DF %>%
   mutate_if(is.character,as.numeric) %>%
   gather("IV", "Gamma", 2:length(Implied_Vol)) %>%
   ggplot(aes(x = Spot, y = Gamma, colour = IV)) +
-    geom_line() +
+    geom_line(linewidth  = 1) +
     labs(title    = "What happens to Gamma when IV increases",
          subtitle = "Calculations for a Call Option", 
          caption  = "Own calculations.",
@@ -86,7 +86,7 @@ Delta_DF %>%
   mutate_if(is.character,as.numeric) %>%
   gather("IV", "Delta", 2:length(Implied_Vol)) %>%
   ggplot(aes(x = Spot, y = Delta, colour = IV)) +
-  geom_line() +
+  geom_line(linewidth  = 1) +
   labs(title    = "What happens to Delta when IV increases",
        subtitle = "Calculations for a Call Option", 
        caption  = "Own calculations.",
